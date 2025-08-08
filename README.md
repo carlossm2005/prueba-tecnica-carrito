@@ -31,7 +31,7 @@ El carrito se mantiene **en memoria** para simplificar el flujo, tal como lo ind
 ```bash
 git clone https://github.com/carlossm2005/prueba-tecnica-carrito.git
 
-cd hoytrabajas-cart
+cd prueba-tecnica-carrito
 
 ```
 
