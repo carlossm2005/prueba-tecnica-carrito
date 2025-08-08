@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 Prueba Técnica – HoyTrabajas
 
-## Getting Started
+Esta aplicación es la solución a la prueba técnica solicitada por HoyTrabajas.  
+Incluye una API REST para manejar productos y un carrito de compras, un frontend en Next.js para interactuar con la API y una función para calcular la mejor combinación de productos que no supere un presupuesto dado.
 
-First, run the development server:
+---
+
+## 📋 Descripción de la solución
+
+La solución está construida en **Next.js con TypeScript**, usando **API Routes** para el backend y React para el frontend, todo en un solo proyecto.  
+El carrito se mantiene **en memoria** para simplificar el flujo, tal como lo indica la prueba.
+
+**Características principales:**
+- **API REST** con 3 endpoints:
+  - `GET /api/products` → Lista de productos desde un archivo `products.json`.
+  - `POST /api/cart` → Agrega un producto al carrito por su `id`.
+  - `GET /api/cart` → Devuelve el contenido del carrito.
+- **Frontend**:
+  - Página principal con listado de productos y botón para agregarlos al carrito.
+  - Página de carrito con total calculado.
+  - Página de combinaciones para calcular la mejor combinación de productos dentro de un presupuesto.
+- **Tema claro/oscuro** persistente en `localStorage` y con detección automática del tema del sistema.
+- **Lógica**: Algoritmo `findBestCombination` que encuentra la mejor combinación de productos sin superar un presupuesto dado.
+
+---
+
+## ⚙️ Instalación y ejecución
+
+### 1️⃣ Clonar el repositorio
+
+```bash
+git clone https://github.com/carlossm2005/prueba-tecnica-carrito.git
+
+cd hoytrabajas-cart
+
+```
+
+### 2️⃣ Instalar dependencias
+
+```bash
+npm install
+```
+
+### 3️⃣ Ejecutar en modo desarrollo
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+La aplicación va a estar disponible en http://localhost:3000.
